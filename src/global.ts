@@ -1,9 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
+import type { Theme } from './themes/light'
+import styled from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   :root {
-    --cor-principal: #a7727d;
-    --cor-secundaria: #f9f5e7;
+    --cor-principal: ${(props) => (props.theme as Theme).corPrincipal};
+    --cor-secundaria: ${(props) => (props.theme as Theme).corSecundaria};
   }
 
   * {
@@ -16,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding-bottom: 120px;
+    background-color:  ${(props) => (props.theme as Theme).corDeFundo};
   }
 
   .container {
@@ -27,6 +30,21 @@ const GlobalStyle = createGlobalStyle`
       max-width: 80%;
     }
   }
+`
+
+export const Botao = styled.button`
+  border: 1px solid var(--cor-principal);
+  background-color: var(--cor-secundaria);
+  color: var(--cor-principal);
+  padding: 16px;
+  transition: all ease 0.3s;
+  border-radius: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-principal);
 `
 
 export default GlobalStyle
