@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Form = styled.form`
    {
-    height: 360px;
+    height: 362px;
     width: 100%;
     background-image: url('https://cdn.pixabay.com/photo/2018/08/10/15/45/woman-3597101_1280.jpg');
     background-size: cover;
@@ -31,13 +31,13 @@ export const Form = styled.form`
 export const HeroTitle = styled.h2`
   .heroTitle {
     font-family: Gloock, serif;
-    font-size: 48px;
+    font-size: 49px;
   }
 
   @media (max-width: 768px) {
     .form {
       height: auto;
-      padding: 24px 0;
+      padding: 25px 0;
     }
 
     & {

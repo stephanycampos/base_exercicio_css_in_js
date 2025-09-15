@@ -6,7 +6,7 @@ export const Form = styled.form`
   background-color: var(--cor-secundaria);
   padding: 32px;
   border-radius: 12px;
-  margin-top: 40px;
+  margin-top: 41px;
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ export const Campo = styled.input`
   outline-color: var(--cor-principal);
   @media (max-width: 768px) {
     padding: 10px 16px;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
     margin-left: 10px;
   }
 `
