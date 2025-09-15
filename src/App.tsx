@@ -11,10 +11,10 @@ import temaDark from './themes/dark'
 import { useState, useEffect } from 'react'
 
 function App() {
-  // Função para recuperar o tema do localStorage
+
   const getStoredTheme = () => {
     const storedTheme = localStorage.getItem('temaDark')
-    return storedTheme === 'true' // Convertendo string para boolean
+    return storedTheme === 'true' 
   }
 
   const [estadousandoTemaDark, setEstadoUsandoTemaDark] =
@@ -24,7 +24,7 @@ function App() {
     setEstadoUsandoTemaDark(!estadousandoTemaDark)
   }
 
-  // Salvando o tema no localStorage sempre que ele for trocado
+  
   useEffect(() => {
     localStorage.setItem('temaDark', estadousandoTemaDark.toString())
   }, [estadousandoTemaDark])
